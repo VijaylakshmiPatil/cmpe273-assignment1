@@ -1,6 +1,7 @@
 package edu.sjsu.cmpe.library.repository;
 
 import edu.sjsu.cmpe.library.domain.Book;
+import edu.sjsu.cmpe.library.domain.Review;
 
 /**
  * Book repository interface.
@@ -27,6 +28,10 @@ public interface BookRepositoryInterface {
      * @return a book instance
      */
     Book getBookByISBN(Long isbn);
+    Book deleteBookByISBN(Long isbn);
+    void updateBookByIsbn(Long isbn, String status);
 
+	Review getReviewByID(Long isbn, int id);
+    
     // TODO: add other operations here!
 }
